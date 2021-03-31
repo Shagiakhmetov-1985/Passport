@@ -13,6 +13,7 @@
 		79980906261464CF00F219A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79980904261464CF00F219A1 /* Main.storyboard */; };
 		79980908261464D000F219A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79980907261464D000F219A1 /* Assets.xcassets */; };
 		7998090B261464D000F219A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79980909261464D000F219A1 /* LaunchScreen.storyboard */; };
+		7998091B2614A27100F219A1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7998091A2614A27100F219A1 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		79980907261464D000F219A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7998090A261464D000F219A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7998090C261464D000F219A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7998091A2614A27100F219A1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				799808FE261464CF00F219A1 /* AppDelegate.swift */,
 				79980900261464CF00F219A1 /* SceneDelegate.swift */,
+				7998091A2614A27100F219A1 /* WelcomeViewController.swift */,
 				79980902261464CF00F219A1 /* ViewController.swift */,
 				79980904261464CF00F219A1 /* Main.storyboard */,
 				79980907261464D000F219A1 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79980903261464CF00F219A1 /* ViewController.swift in Sources */,
+				7998091B2614A27100F219A1 /* WelcomeViewController.swift in Sources */,
 				799808FF261464CF00F219A1 /* AppDelegate.swift in Sources */,
 				79980901261464CF00F219A1 /* SceneDelegate.swift in Sources */,
 			);
