@@ -17,6 +17,11 @@ class LoginViewController: UIViewController {
     private let user = "Marat"
     private let password = "qwerty"
     
+    private let viewControllers = [WelcomeViewController(),
+                                   AboutMeViewController(),
+                                   PhotosViewController(),
+                                   SettingViewController()]
+    
     private let colorOne = UIColor(
         red: 235/255,
         green: 55/255,
@@ -29,19 +34,33 @@ class LoginViewController: UIViewController {
         blue: 235/255,
         alpha: 1
     )
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.setColorBackground(topColor: colorOne, bottomColor: colorTwo)
         setButtonForm()
         
     }
-    
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! WelcomeViewController
-        welcomeVC.user = user
+        let _ = segue.destination as! UITabBarController
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            }
+        }
+    }
+    // MARK: Set background color
+    override func viewWillLayoutSubviews() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0,
+                                     y: 0,
+                                     width: view.bounds.width,
+                                     height: view.bounds.height
+        )
+        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     // MARK: IB Actions
     @IBAction func logInActionButton() {
@@ -53,7 +72,6 @@ class LoginViewController: UIViewController {
             )
             return
         }
-        
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
@@ -80,17 +98,6 @@ class LoginViewController: UIViewController {
             blue: 245,
             alpha: 1
         )
-    }
-}
-// MARK: - Set background color
-extension UIView {
-    func setColorBackground(topColor: UIColor, bottomColor: UIColor) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = bounds
-        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 // MARK: - Alert Controller

@@ -10,8 +10,8 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
-
-    var user = ""
+    
+    var user = "Marat Shagiakhmetov"
     
     override func viewDidLoad() {
         super.viewDidLoad()

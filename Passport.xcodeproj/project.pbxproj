@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79727CF12618D0A400A0AA89 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79727CF02618D0A400A0AA89 /* AboutMe.swift */; };
+		79727CFB2618FF7200A0AA89 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79727CFA2618FF7200A0AA89 /* AboutMeViewController.swift */; };
+		79727CFE2618FFD700A0AA89 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79727CFD2618FFD700A0AA89 /* PhotosViewController.swift */; };
 		799808FF261464CF00F219A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799808FE261464CF00F219A1 /* AppDelegate.swift */; };
 		79980901261464CF00F219A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79980900261464CF00F219A1 /* SceneDelegate.swift */; };
 		79980903261464CF00F219A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79980902261464CF00F219A1 /* LoginViewController.swift */; };
@@ -14,9 +17,13 @@
 		79980908261464D000F219A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79980907261464D000F219A1 /* Assets.xcassets */; };
 		7998090B261464D000F219A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79980909261464D000F219A1 /* LaunchScreen.storyboard */; };
 		7998091B2614A27100F219A1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7998091A2614A27100F219A1 /* WelcomeViewController.swift */; };
+		79F82EE32619E7C3009D4214 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82EE22619E7C3009D4214 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79727CF02618D0A400A0AA89 /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		79727CFA2618FF7200A0AA89 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		79727CFD2618FFD700A0AA89 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		799808FB261464CF00F219A1 /* Passport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799808FE261464CF00F219A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79980900261464CF00F219A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		7998090A261464D000F219A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7998090C261464D000F219A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7998091A2614A27100F219A1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		79F82EE22619E7C3009D4214 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79727CEF2618D06200A0AA89 /* ViewControlls */ = {
+			isa = PBXGroup;
+			children = (
+				79980902261464CF00F219A1 /* LoginViewController.swift */,
+				7998091A2614A27100F219A1 /* WelcomeViewController.swift */,
+				79727CFA2618FF7200A0AA89 /* AboutMeViewController.swift */,
+				79727CFD2618FFD700A0AA89 /* PhotosViewController.swift */,
+				79F82EE22619E7C3009D4214 /* SettingViewController.swift */,
+			);
+			path = ViewControlls;
+			sourceTree = "<group>";
+		};
+		79727CF32618D0BB00A0AA89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79727CF02618D0A400A0AA89 /* AboutMe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79727CF42618D0DD00A0AA89 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				79980904261464CF00F219A1 /* Main.storyboard */,
+				79980909261464D000F219A1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		79727CF62618D14A00A0AA89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				79980907261464D000F219A1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79727CF72618D16C00A0AA89 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				799808FE261464CF00F219A1 /* AppDelegate.swift */,
+				79980900261464CF00F219A1 /* SceneDelegate.swift */,
+				7998090C261464D000F219A1 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		799808F2261464CF00F219A1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +113,11 @@
 		799808FD261464CF00F219A1 /* Passport */ = {
 			isa = PBXGroup;
 			children = (
-				799808FE261464CF00F219A1 /* AppDelegate.swift */,
-				79980900261464CF00F219A1 /* SceneDelegate.swift */,
-				79980902261464CF00F219A1 /* LoginViewController.swift */,
-				7998091A2614A27100F219A1 /* WelcomeViewController.swift */,
-				79980904261464CF00F219A1 /* Main.storyboard */,
-				79980907261464D000F219A1 /* Assets.xcassets */,
-				79980909261464D000F219A1 /* LaunchScreen.storyboard */,
-				7998090C261464D000F219A1 /* Info.plist */,
+				79727CEF2618D06200A0AA89 /* ViewControlls */,
+				79727CF32618D0BB00A0AA89 /* Models */,
+				79727CF42618D0DD00A0AA89 /* Storyboards */,
+				79727CF72618D16C00A0AA89 /* Supporting */,
+				79727CF62618D14A00A0AA89 /* Resources */,
 			);
 			path = Passport;
 			sourceTree = "<group>";
@@ -141,8 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				79980903261464CF00F219A1 /* LoginViewController.swift in Sources */,
+				79727CF12618D0A400A0AA89 /* AboutMe.swift in Sources */,
 				7998091B2614A27100F219A1 /* WelcomeViewController.swift in Sources */,
+				79F82EE32619E7C3009D4214 /* SettingViewController.swift in Sources */,
 				799808FF261464CF00F219A1 /* AppDelegate.swift in Sources */,
+				79727CFE2618FFD700A0AA89 /* PhotosViewController.swift in Sources */,
+				79727CFB2618FF7200A0AA89 /* AboutMeViewController.swift in Sources */,
 				79980901261464CF00F219A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Passport/Info.plist;
+				INFOPLIST_FILE = Passport/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Passport/Info.plist;
+				INFOPLIST_FILE = Passport/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
