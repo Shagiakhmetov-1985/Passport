@@ -5,45 +5,31 @@
 //  Created by Marat Shagiakhmetov on 03.04.2021.
 //
 
-struct Person {
-    let name: String
-    let firstName: String
-    let yearOfBirth: Int
-    let account: [Account]
-    let aboutMe: [AdditionalInfomation]
-    
-    static func getInformaton() -> [Person] {
-        [
-            Person(name: "Marat",
-                   firstName: "Shagiakhmetov",
-                   yearOfBirth: 1985,
-                   account: [
-                   Account(login: "Marat", password: "qwerty"),
-                   ],
-                   aboutMe: [
-                   AdditionalInfomation(hometown: "Москва",
-    education: "Высшее",
-    familyStatus: "Женат",
-    favoriteLessons: "алгебра, геометрия, спорт, информационные технологии, путешествия",
-    favoriteSportLessons: "легкая атлетика, волейбол, тренажерный зал",
-    favoriteWriter: "Жюль Верн",
-    favoriteBooks: "20 тысяч лье под водой, Дети капитана Гранта, Таинственный остров, Вокруг света за 80 дней")
-                   ])
-        ]
-    }
-}
-
 struct Account {
     let login: String
     let password: String
+    let person: Person
+    
+    static func getInformaton() -> Account {
+        
+        Account(
+            login: "Marat",
+            password: "qwerty",
+            person: Person.getPerson()
+        )
+        
+    }
 }
 
-struct AdditionalInfomation {
-    let hometown: String
-    let education: String
-    let familyStatus: String
-    let favoriteLessons: String
-    let favoriteSportLessons: String
-    let favoriteWriter: String
-    let favoriteBooks: String
+struct Person {
+    let name: String
+    let surname: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getPerson() -> Person {
+        Person(name: "Marat", surname: "Shagiakhmetov")
+    }
 }

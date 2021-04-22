@@ -14,13 +14,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var logInButton: UIButton!
     // MARK: - Private properties
-    private let user = "Marat"
-    private let password = "qwerty"
-    
-    private let viewControllers = [WelcomeViewController(),
-                                   AboutMeViewController(),
-                                   PhotosViewController(),
-                                   SettingViewController()]
+    private let userEnter = Account.getInformaton()
     
     private let colorOne = UIColor(
         red: 235/255,
@@ -42,10 +36,12 @@ class LoginViewController: UIViewController {
     }
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let _ = segue.destination as! UITabBarController
-        for viewController in viewControllers {
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomveVC = $0 as? WelcomeViewController {
+                welcomveVC.user = userEnter
             }
         }
     }
@@ -64,8 +60,8 @@ class LoginViewController: UIViewController {
     }
     // MARK: IB Actions
     @IBAction func logInActionButton() {
-        guard loginTextField.text == user,
-              passwordTextField.text == password else {
+        guard loginTextField.text == userEnter.login,
+              passwordTextField.text == userEnter.password else {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password",
                       textField: passwordTextField

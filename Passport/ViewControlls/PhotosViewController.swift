@@ -8,9 +8,15 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
-
+    
+    @IBOutlet weak var backgroundViewPhotos: UIView!
+    
+    var switchTheme = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    
 }
